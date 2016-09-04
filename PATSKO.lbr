@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.2.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -321,6 +321,29 @@ NS Package M08A</description>
 <text x="5.661" y="-1.254" size="1.016" layer="21" ratio="12" rot="R180">1</text>
 <text x="-3.34" y="-2.815" size="1.27" layer="27" ratio="12">&gt;VALUE</text>
 </package>
+<package name="SOT-223">
+<description>&lt;b&gt;ST Package 3-Lead Plastic SOT-223&lt;/b&gt; (LTC DWG # 05-08-1630)&lt;p&gt;
+Source: &lt;a href="http://cds.linear.com/docs/Datasheet/112935ff.pdf"&gt; Data Sheet&lt;/a&gt;</description>
+<wire x1="3.277" y1="1.778" x2="3.277" y2="-1.778" width="0.2032" layer="21"/>
+<wire x1="3.277" y1="-1.778" x2="-3.277" y2="-1.778" width="0.2032" layer="21"/>
+<wire x1="-3.277" y1="-1.778" x2="-3.277" y2="1.778" width="0.2032" layer="21"/>
+<wire x1="-3.277" y1="1.778" x2="3.277" y2="1.778" width="0.2032" layer="21"/>
+<smd name="1" x="-2.2987" y="-3.1496" dx="0.9906" dy="1.4986" layer="1"/>
+<smd name="2" x="0" y="-3.1496" dx="0.9906" dy="1.4986" layer="1"/>
+<smd name="3" x="2.2987" y="-3.1496" dx="0.9906" dy="1.4986" layer="1"/>
+<smd name="TAB" x="0" y="3.1496" dx="3.2766" dy="1.4986" layer="1"/>
+<text x="-2.54" y="0.0508" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-1.3208" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.6002" y1="1.8034" x2="1.6002" y2="3.6576" layer="51"/>
+<rectangle x1="-0.4318" y1="-3.6576" x2="0.4318" y2="-1.8034" layer="51"/>
+<rectangle x1="-2.7432" y1="-3.6576" x2="-1.8796" y2="-1.8034" layer="51"/>
+<rectangle x1="1.8796" y1="-3.6576" x2="2.7432" y2="-1.8034" layer="51"/>
+<rectangle x1="-1.6002" y1="1.8034" x2="1.6002" y2="3.6576" layer="51"/>
+<rectangle x1="-0.4318" y1="-3.6576" x2="0.4318" y2="-1.8034" layer="51"/>
+<rectangle x1="-2.7432" y1="-3.6576" x2="-1.8796" y2="-1.8034" layer="51"/>
+<rectangle x1="1.8796" y1="-3.6576" x2="2.7432" y2="-1.8034" layer="51"/>
+<rectangle x1="-1" y1="-1" x2="1" y2="1" layer="35"/>
+</package>
 </packages>
 <symbols>
 <symbol name="TL7660">
@@ -389,6 +412,36 @@ NS Package M08A</description>
 <pin name="1" x="-2.54" y="-7.62" visible="off" length="short" direction="pas" rot="R90"/>
 <pin name="3" x="-2.54" y="7.62" visible="off" length="short" direction="pas" rot="R270"/>
 <pin name="2" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="LM2940">
+<pin name="IN" x="-12.7" y="0" visible="off" length="middle" direction="in"/>
+<pin name="OUT" x="12.7" y="0" visible="off" length="middle" direction="pas" rot="R180"/>
+<wire x1="-7.62" y1="2.54" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<pin name="GND" x="0" y="-10.16" visible="off" length="middle" direction="in" rot="R90"/>
+<text x="-6.35" y="-1.016" size="1.778" layer="97">IN</text>
+<text x="1.778" y="-1.016" size="1.778" layer="97">OUT</text>
+<text x="-2.54" y="-4.318" size="1.778" layer="97">GND</text>
+<text x="-7.62" y="3.81" size="1.778" layer="95">&gt;NAME</text>
+<text x="1.27" y="-7.62" size="1.778" layer="95">&gt;VALUE</text>
+</symbol>
+<symbol name="SPI_MEMORY">
+<wire x1="-10.16" y1="10.16" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-10.16" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-10.16" x2="10.16" y2="10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="10.16" x2="-10.16" y2="10.16" width="0.254" layer="94"/>
+<pin name="DATA_IN" x="15.24" y="7.62" length="middle" direction="in" rot="R180"/>
+<pin name="VCC" x="-15.24" y="7.62" length="middle" direction="pwr"/>
+<pin name="GND" x="-15.24" y="-7.62" length="middle" direction="pwr"/>
+<pin name="DATA_OUT" x="15.24" y="5.08" length="middle" direction="out" rot="R180"/>
+<pin name="CLOCK" x="15.24" y="2.54" length="middle" direction="in" rot="R180"/>
+<pin name="SELECT" x="15.24" y="0" length="middle" direction="in" rot="R180"/>
+<pin name="WP" x="15.24" y="-5.08" length="middle" direction="in" rot="R180"/>
+<pin name="HOLD" x="15.24" y="-7.62" length="middle" direction="in" rot="R180"/>
+<text x="-10.16" y="11.43" size="1.778" layer="94">&gt;NAME</text>
+<text x="-10.16" y="-12.7" size="1.778" layer="94">VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -516,6 +569,67 @@ LT1054 - NC &lt;br&gt;</description>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 <connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LM2940">
+<description>&lt;b&gt;LM2940 - regulador LDO&lt;/b&gt;&lt;p&gt;
+Regulador LDO em encapsulamento SOT-223</description>
+<gates>
+<gate name="G$1" symbol="LM2940" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT-223">
+<connects>
+<connect gate="G$1" pin="GND" pad="2 TAB" route="any"/>
+<connect gate="G$1" pin="IN" pad="1"/>
+<connect gate="G$1" pin="OUT" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPI_MEMORY" prefix="IC">
+<description>&lt;b&gt;SPI EEPROM/FRAM/Flash Memory&lt;/b&gt;&lt;p&gt;
+Footprint compatible: &lt;br&gt;
+M25PE - Flash memory - Micron/ST &lt;br&gt;
+MB85RS, FM25 - FRAM &lt;br&gt;
+25xx - EEPROM &lt;br&gt;</description>
+<gates>
+<gate name="G$1" symbol="SPI_MEMORY" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-SOIC" package="SO08">
+<connects>
+<connect gate="G$1" pin="CLOCK" pad="6"/>
+<connect gate="G$1" pin="DATA_IN" pad="5"/>
+<connect gate="G$1" pin="DATA_OUT" pad="2"/>
+<connect gate="G$1" pin="GND" pad="4"/>
+<connect gate="G$1" pin="HOLD" pad="7"/>
+<connect gate="G$1" pin="SELECT" pad="1"/>
+<connect gate="G$1" pin="VCC" pad="8"/>
+<connect gate="G$1" pin="WP" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="-DIP" package="DIL08">
+<connects>
+<connect gate="G$1" pin="CLOCK" pad="6"/>
+<connect gate="G$1" pin="DATA_IN" pad="5"/>
+<connect gate="G$1" pin="DATA_OUT" pad="2"/>
+<connect gate="G$1" pin="GND" pad="4"/>
+<connect gate="G$1" pin="HOLD" pad="7"/>
+<connect gate="G$1" pin="SELECT" pad="1"/>
+<connect gate="G$1" pin="VCC" pad="8"/>
+<connect gate="G$1" pin="WP" pad="3"/>
 </connects>
 <technologies>
 <technology name=""/>
