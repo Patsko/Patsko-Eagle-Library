@@ -711,7 +711,7 @@ Source: LITE-ON ELECTRONICS, LTV816.pdf</description>
 <devicesets>
 <deviceset name="TC7660" prefix="IC">
 <description>&lt;b&gt;CMOS charge pump&lt;/b&gt;&lt;p&gt;
-Footprint compatível com diversos modelos: &lt;br&gt;
+Footprint compatible with (Boost/NC pin configuration): &lt;br&gt;
 TL7660 - NC &lt;br&gt;
 TC7660 - NC &lt;br&gt;
 TC7660H - NC &lt;br&gt;
@@ -841,8 +841,9 @@ LT1054 - NC &lt;br&gt;</description>
 </devices>
 </deviceset>
 <deviceset name="LM2940">
-<description>&lt;b&gt;LM2940 - regulador LDO&lt;/b&gt;&lt;p&gt;
-Regulador LDO em encapsulamento SOT-223</description>
+<description>&lt;b&gt;LM2940 - LDO regulator&lt;/b&gt;&lt;p&gt;
+
+LDO regulator in SOT-223 package</description>
 <gates>
 <gate name="G$1" symbol="LM2940" x="0" y="0"/>
 </gates>
@@ -902,10 +903,10 @@ MB85RS, FM25 - FRAM &lt;br&gt;
 </devices>
 </deviceset>
 <deviceset name="OPTOCOUPLER">
-<description>&lt;b&gt; Optocoupler - 4 pin &lt;/b&gt;&lt;p&gt;
+<description>&lt;b&gt; Optocoupler - 4 pin SMD &lt;/b&gt;&lt;p&gt;
 Footprint compatible with: &lt;br&gt;
 SFH6156&lt;br&gt;
-EL317&lt;br&gt;</description>
+EL817&lt;br&gt;</description>
 <gates>
 <gate name="G$1" symbol="OPTOCOUPLER" x="0" y="0"/>
 </gates>
@@ -924,7 +925,11 @@ EL317&lt;br&gt;</description>
 </devices>
 </deviceset>
 <deviceset name="MT8816" prefix="IC">
-<description>&lt;b&gt;8x16 Analog Switch Array&lt;/b&gt;&lt;p&gt;</description>
+<description>&lt;b&gt;8x16 Analog Switch Array&lt;/b&gt;&lt;p&gt;
+
+Footprint compatible with: &lt;br&gt;
+MT8116 &lt;br&gt;
+CD22M3494MQ</description>
 <gates>
 <gate name="G$1" symbol="MT8816" x="0" y="0"/>
 </gates>
